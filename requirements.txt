@@ -1,6 +1,6 @@
 -r lint-requirements.txt
 huggingface_hub>=0.7.0
-hyperpyyaml>=0.0.1
+hyperpyyaml @ git+https://github.com/sjkoelle/HyperPyYAML
 joblib>=0.14.1
 numpy>=1.17.0
 packaging

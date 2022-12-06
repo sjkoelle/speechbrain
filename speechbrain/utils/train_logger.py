@@ -4,7 +4,7 @@ Authors
  * Peter Plantinga 2020
 """
 import logging
-import ruamel.yaml
+import ruamel_yaml
 import torch
 import os
 
@@ -182,7 +182,7 @@ class WandBLogger(TrainLogger):
             yaml_file = kwargs.pop("yaml_config")
             with open(yaml_file, "r") as yaml_stream:
                 # Read yaml with ruamel to ignore bangs
-                config_dict = ruamel.yaml.YAML().load(yaml_stream)
+                config_dict = ruamel_yaml.YAML().load(yaml_stream)
             self.run = kwargs.pop("initializer", None)(
                 *args, **kwargs, config=config_dict
             )
